@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <!--<link rel="stylesheet" href="test.css">-->
+  <script src="script.js"></script>
+  <title>Frontend Mentor | News homepage</title>
+</head>
+<body>
+  <div class="news-homepage-main">
+    <header>
+    <h1>
+      <a href="/">
+        <img src="./assets/images/logo.svg" alt="Site Logo" />
+      </a>
+    </h1>
+<nav class="navbar nav-ul">
+  <!-- : shown only on <=765px -->
+  <div class="nav_icon" id="nav_icon">&#9776;</div>
+
+  <!-- Nav links -->
+  <ul class="nav-links desktop-nav" id="nav-links">
+    
+    <li><a href="#">Home</a></li>
+    <li><a href="#">New</a></li>
+    <li><a href="#">Popular</a></li>
+    <li><a href="#">Trending</a></li>
+    <li><a href="#">Categories</a></li>
+  </ul>
+  
+</nav>
+<div class="mobile-nav" id="mobileNav">
+    <div class="close_icon" id="close_icon">&times;</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">New</a></li>
+      <li><a href="#">Popular</a></li>
+      <li><a href="#">Trending</a></li>
+      <li><a href="#">Categories</a></li>
+    </ul>
+</div>
+</header>
+  <div class="section">
+    <div class="card card1">
+        <figure>
+            <img src="./assets/images/block_desktop_resized.jpg" alt="block" />
+        </figure>
+    </div>
+    <div class="card card2">
+        <h1>New</h1>
+      <ul>
+        <li>
+          <h5> Hydrogen VS Electric Cars</h5>
+          <p> Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </li>
+        <li>
+          <h5> The Downsides of AI Artistry</h5>
+          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        </li>
+        <li>
+          <h5>Is VC Funding Drying Up?</h5>
+          <p> Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="card card3">
+        <h1>
+        The Bright Future of Web 3.0?
+      </h1>
+    </div>
+    <div class="card card4">
+        <p>
+        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+        But is it really fulfilling its promise? <br>
+         <button>Read More</button>
+      </p>
+    </div>
+  </div> 
+    
+    <div class="articles">
+      <article>
+        <div class="content card1">
+        <img src="./assets/images/01.jpg" alt="">
+        <div class="text">
+        <h3>01</h3>
+        <h5>Reviving Retro PCs</h5>
+        <p> What happens when old PCs are given modern upgrades?</p>
+        </div>
+        </div>
+      </article>
+      <article>
+        <div class="content card1">
+        <img src="./assets/images/02.jpg" alt="">
+        <div class="text">
+        <h3>02</h3>
+        <h5>Top 10 Laptops of 2022</h5>
+        <p>Our best picks for various needs and budgets.</p>
+        </div>
+        </div>
+      </article>
+      <article>
+        <div class="content card1">
+        <img src="./assets/images/03.jpg" alt="">
+        <div class="text">
+        <h3>03</h3>
+        <h5> The Growth of Gaming</h5>
+        <p> How the pandemic has sparked fresh opportunities.</p>
+        </div>
+        </div>
+      </article>
+    </div><br><br>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </div>
+</body>
+</html>

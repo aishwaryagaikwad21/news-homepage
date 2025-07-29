@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;     /* horizontal center */
+  align-items: center;         /* vertical center */
+  min-height: 100vh;           /* full screen height */
+  background-color: #f0f0f0;   /* optional: background */
+  font-family: 'Inter', sans-serif;
+  
+}
+
+header{
+  display: flex;
+  margin-bottom: 20px;
+}
+.news-homepage-main{
+      max-width: 1440px;
+      margin:auto 250px;
+      padding:30px;
+      /*background-color: red;*/
+}
+
+.mobile-nav, .close_icon{
+   display: none;
+}
+
+.nav-ul {
+  list-style: none;
+  display:flex;
+  justify-content: flex-end; /* Pushes items to the right */
+  list-style: none;
+  gap: 7px; /* optional spacing between items */
+  margin-left: 480px;
+}
+
+.nav-ul li{
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Hide nav_icon by default */
+.nav_icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+article img{
+    width:70px;
+    height:100px;
+  }
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+}
+.articles article {
+  padding: 15px;
+  display: grid;
+}
+
+.content {
+  display: flex;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;     /* Stack h3, h5, p vertically */
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.text h3 {
+  margin: 0;
+  font-size: 18px;
+  color: gray;
+}
+
+.text h5 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.text p {
+  font-size: 14px;
+  color: #555;
+}
+
+header{
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+
+
+.card li{
+    list-style: none;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+
+.card:nth-of-type(1){
+    grid-column: 1/4;
+    background-color: red;
+}
+
+.card img {
+  width: 100%;          /* Fills the grid cell’s width */
+  height: 100%;         /* Fills the height (can adjust if needed) */
+  object-fit: cover;    /* Keeps the image inside boundaries, crops if needed */
+  display: block;       /* Removes bottom whitespace from inline img */
+    /* Optional: smooth corners */
+}
+
+.card:nth-of-type(2){
+    grid-row: 1/9;
+    grid-column: 4/7;
+    background-color: hsl(240, 100%, 5%);
+    width:300px;
+    color: #f0f0f0;
+   
+}
+
+/* CTA button */
+  .card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #f15e50;
+    color: white;
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+  }
+
+  .card button:hover {
+    background-color: #d94d40;
+  }
+
+  /* "New" card dark section */
+  .card:nth-of-type(2) {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    padding: 20px;
+   
+  }
+
+  .card:nth-of-type(2) h1 {
+    color: hsl(35, 77%, 62%);
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .card:nth-of-type(2) h5 {
+    font-size: 16px;
+    margin-top: 20px;
+    color: white;
+  }
+
+  .card:nth-of-type(2) p {
+    font-size: 14px;
+    color: hsl(236, 13%, 70%);
+    margin-bottom: 10px;
+  }
+
+  .card:nth-of-type(2) ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .card:nth-of-type(2) li:not(:last-child) {
+    border-bottom: 1px solid hsl(236, 13%, 40%);
+    padding-bottom: 15px;
+  }
+
+.card:nth-of-type(3){
+    grid-row: 2/9;
+    grid-column: 1/2;
+    
+}
+
+.card:nth-of-type(4){
+    grid-row:2/9;
+    grid-column: 2/4;
+   padding-left: 50px;
+}
+
+.p_section{
+    padding:10px;
+    text-align:justify;
+    margin-left: 30px;
+}
+
+/* Show nav_icon and hide nav links under 765px */
+@media (max-width: 765px) {
+  .news-homepage-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+  .nav_icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .close_icon {
+    display: block;
+  }
+
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+     transition: all 0.3s ease;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links li a {
+    color: black;
+    font-size: 16px;
+  }
+
+  
+}
+
+@media (max-width: 765px) {
+  /* Layout wrapper */
+  .news-homepage-main {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+   .nav_icon {
+    display: block;
+  }
+ 
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    padding: 40px 20px;
+    z-index: 1000;
+  }
+
+  .mobile-nav.show {
+    right: 0;
+  }
+
+  .close_icon {
+   
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .mobile-nav .nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobile-nav .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+
+  body.menu-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
+  /* Section (cards) stacked vertically */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+  }
+
+  /* CTA button */
+  .card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #f15e50;
+    color: white;
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+  }
+
+  .card button:hover {
+    background-color: #d94d40;
+  }
+
+  /* "New" card dark section */
+  .card:nth-of-type(2) {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    padding: 20px;
+   width:fit-content;
+   line-height: 30px;
+  }
+
+  .card:nth-of-type(2) h1 {
+    color: hsl(35, 77%, 62%);
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .card:nth-of-type(2) h5 {
+    font-size: 16px;
+    margin-top: 20px;
+    color: white;
+    text-align: left;
+  }
+
+  .card:nth-of-type(2) p {
+    font-size: 14px;
+    text-align: left;
+    color: hsl(236, 13%, 70%);
+    margin-bottom: 10px;
+  }
+
+  .card:nth-of-type(2) ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .card:nth-of-type(2) li:not(:last-child) {
+    border-bottom: 1px solid hsl(236, 13%, 40%);
+    padding-bottom: 15px;
+  }
+
+  /* Articles stacked */
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .content {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .content img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+  }
+
+  .text h3 {
+    color: hsl(236, 13%, 70%);
+    font-size: 20px;
+  }
+
+  .text h5 {
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .text p {
+    font-size: 14px;
+    color: hsl(236, 13%, 50%);
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    padding: 20px 10px;
+    margin: 0; 
+    width: 100%;
+  }
+
+  .nav_icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: right;
+    padding-left: 10px;
+  }
+}
+
+
+
+
